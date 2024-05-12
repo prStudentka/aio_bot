@@ -1,7 +1,7 @@
 from aiogram import Router, F
 from aiogram.filters import Command, StateFilter
 from aiogram.types import Message
-from games.guess_number import *
+from bot.games.guess_number import *
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 
