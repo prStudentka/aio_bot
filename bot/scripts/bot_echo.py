@@ -10,10 +10,10 @@ load_dotenv()
 
 def main():
     mybot = Bot(token=TOKEN)
-    DISPATCHER = Dispatcher()
-    DISPATCHER.include_router(echo_bot.router)
-    DISPATCHER.include_router(game_bot.router_game)
-    DISPATCHER.run_polling(mybot)
+    dp = Dispatcher()
+    dp.include_router(echo_bot.router)
+    dp.include_router(game_bot.router_game)
+    dp.run_polling(mybot)
 
 
 if __name__ == '__main__':
