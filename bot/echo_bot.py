@@ -1,5 +1,5 @@
 from aiogram import Router, F
-from aiogram.filters import Command, StateFilter
+from aiogram.filters import Command, StateFilter, CommandStart
 from aiogram.types import Message
 from aiogram.fsm.state import default_state
 from aiogram.fsm.context import FSMContext
@@ -9,7 +9,7 @@ from bot import game_bot
 router = Router()
 
 
-@router.message(Command('start'), StateFilter(default_state))
+@router.message(CommandStart(), StateFilter(default_state))
 async def start_bot(message: Message):
     name = message.from_user.full_name
     await message.answer(f'Привет!\nНапиши мне что-нибудь {name}')
