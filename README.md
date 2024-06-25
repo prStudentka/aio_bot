@@ -1,4 +1,4 @@
-# Telegram bot have a many functions for playing with him
+# Telegram bot for fun
 
 #### About
 - echo bot
